@@ -10,7 +10,7 @@ fn main() {
 }
 
 // Define a `fibonacci` function and register it for benchmarking.
-#[bench(args=[100, 1000, 10_000, 100_000])]
+#[bench(args=[10_000, 100_000])]
 fn vstack(bencher: Bencher, n: u64) {
     bencher
         .counter(n * 1000 * 8)
