@@ -29,6 +29,7 @@ fn vstack(bencher: Bencher, n: u64) {
             for df in dfs {
                 acc_df.vstack_mut(df).unwrap();
             }
+            assert_eq!(acc_df.height(), (n * 1000) as usize + 1000);
             acc_df
         })
 }
